@@ -1,0 +1,285 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 24px;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #172554, #2563eb);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+}
+
+.header-tag {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #bfdbfe;
+}
+
+.app-header h1 {
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+.app-header p {
+  margin: 0;
+  color: #dbeafe;
+}
+
+.master-detail-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.people-sidebar,
+.detail-panel {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px #0f172a0a;
+}
+
+.people-sidebar {
+  padding: 20px;
+}
+
+.sidebar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.sidebar-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.sidebar-heading span {
+  font-size: 12px;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.person-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 10px;
+  text-decoration: none;
+  color: #1e293b;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+
+.person-item:hover {
+  background: #f1f5f9;
+}
+
+.person-item.active {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.avatar,
+.detail-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+}
+
+.person-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.person-info h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.person-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #94a3b8;
+}
+
+.detail-panel {
+  min-height: 450px;
+  overflow: hidden;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-avatar {
+  width: 76px;
+  height: 76px;
+  font-size: 30px;
+}
+
+.detail-label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.detail-header h2 {
+  margin: 7px 0;
+  font-size: 25px;
+}
+
+.detail-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.detail-content {
+  padding: 30px;
+}
+
+.detail-content h3 {
+  margin-top: 0;
+  color: #172554;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.detail-item {
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.detail-item span {
+  display: block;
+  margin-bottom: 8px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.detail-item strong {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.description-box {
+  margin-top: 24px;
+  padding: 20px;
+  background: #eff6ff;
+  border-radius: 10px;
+}
+
+.description-box p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  background: #1d4ed8;
+}
+
+.not-found {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.not-found h2 {
+  font-size: 64px;
+  color: #2563eb;
+  margin: 0;
+}
+
+.not-found h3 {
+  font-size: 24px;
+}
+
+.not-found p {
+  color: #64748b;
+}
+
+.app-footer {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@media (max-width: 750px) {
+  .master-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header h1 {
+    font-size: 23px;
+  }
+
+  .detail-header,
+  .detail-content {
+    padding: 20px;
+  }
+}
