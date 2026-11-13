@@ -1,0 +1,164 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 7%;
+  background: #f4f7fb;
+  color: #1e293b;
+}
+
+.header {
+  margin-bottom: 35px;
+}
+
+.tag {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.header h1 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+.header p {
+  color: #64748b;
+}
+
+.forum-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.sidebar,
+.messages-panel {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.channel-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 13px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.channel-button:hover {
+  background: #eff6ff;
+}
+
+.channel-button.active {
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+}
+
+.messages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+}
+
+.channel-label {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.messages-header h2 {
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+.message-count {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.message-list {
+  padding: 0;
+  margin: 20px 0;
+}
+
+.message-card {
+  padding: 18px;
+  margin-bottom: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.message-card dt {
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.message-card dd {
+  margin: 9px 0;
+  color: #334155;
+}
+
+.message-card small {
+  color: #94a3b8;
+}
+
+.status-message {
+  padding: 25px;
+  text-align: center;
+  color: #64748b;
+}
+
+.error-message {
+  color: #dc2626;
+  background: #fef2f2;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 45px;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 25px 15px;
+  }
+
+  .forum-container {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+}
